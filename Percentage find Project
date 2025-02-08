@@ -1,0 +1,82 @@
+#include <iostream>
+using namespace std;
+#include<iomanip>
+
+int main() {
+    int TotalMarks, ObtainMarks;
+    float Percent = 0.0, Gpa;
+    
+    cout<<"Enter Your Total Marks"<<endl;
+    cin>>TotalMarks;
+    
+    cout<<"Enter Your ObtainMarks"<<endl;
+    cin>>ObtainMarks;
+    
+    if(ObtainMarks<=TotalMarks){
+         Percent = 100 * float(ObtainMarks)/float(TotalMarks);
+    }else{
+        cout<<"Incorrect Obtain Marks";
+    }
+    
+    
+    
+    if(Percent>0){
+        if((Percent>=90) && (Percent<=100)){
+            Gpa = 4.00;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"A+\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        }
+        else  if((Percent>=85) && (Percent<=89.99)){
+            Gpa = 4.00;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"A\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        }    
+        else if((Percent>=80) && (Percent<=84.99)){
+            Gpa = (Percent*3.66)/80;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"A-\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        } 
+        else if((Percent>=75) && (Percent<=79.99)){
+            Gpa = (Percent*3.33)/75;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"A-\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        } 
+        else if((Percent>=71) && (Percent<=74.99)){
+            Gpa = (Percent*3.00)/71;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"B\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        } 
+        else if((Percent>=68) && (Percent<=70.99)){
+            Gpa = (Percent*2.66)/68;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"B-\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        } 
+        else if((Percent>=61) && (Percent<=67.99)){
+            Gpa = (Percent*2.00)/61;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"C\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        } 
+        else  if((Percent>=50) && (Percent<=60.99)){
+            Gpa = (Percent*1.00)/50;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"D\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        } 
+        else  if((Percent<50)){
+            Gpa = 0.00;
+            cout<<"Your GPA is:"<<setprecision(3)<<Gpa<<endl;
+            cout<<"Your Grade is \"F\" "<<endl;
+            cout<<"Your Percentage is:"<<setprecision(2)<<Percent<<endl;
+        } 
+        
+    }
+
+    return 0;
+}
